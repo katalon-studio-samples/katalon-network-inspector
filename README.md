@@ -19,7 +19,7 @@
 ## 🧐 About <a name = "about"></a>
 
 <p align="center">
-  Inspect page network by using `Chrome DevTools Protocol`
+  Inspect network activity by using <b>Chrome DevTools Protocol</b>
 </p>
 
 
