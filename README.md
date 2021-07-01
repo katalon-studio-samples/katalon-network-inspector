@@ -22,4 +22,8 @@
   Inspect network activity by using <b>Chrome DevTools Protocol</b>
 </p>
 
+![image](https://user-images.githubusercontent.com/46991507/124067313-66ba4400-da64-11eb-8ea3-29631889fffe.png)
+
+![image](https://user-images.githubusercontent.com/46991507/124067242-468a8500-da64-11eb-9ab5-936132e24075.png)
+
 
