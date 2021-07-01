@@ -72,7 +72,7 @@ fetch.onRequestPaused({def request ->
 
 
 fetch.enable();
-//page.enable();
+page.enable();
 
 
 WebUI.navigateToUrl('https://www.atlassian.com/software/jira');

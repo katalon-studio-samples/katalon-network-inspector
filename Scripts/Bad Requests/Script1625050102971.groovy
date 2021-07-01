@@ -38,6 +38,7 @@ WebUI.openBrowser('');
 WebDriver driver = DriverFactory.getWebDriver();
 ChromeDevToolsService service = CDTUtils.getService(driver);
 
+Page page = service.getPage();
 Network network = service.getNetwork();
 
 // For more details: https://chromedevtools.github.io/devtools-protocol/tot/Network/
@@ -58,17 +59,18 @@ network.onResponseReceived({def response ->
 	if (status >= 200 && status < 300) {
 		printf('[OK %d] %s\r\n', status, res.getUrl());
 	} else {
-		printf('[Error %d] %s\r\n', status, res.getUrl());
+		System.err.printf('[Error %d] %s\r\n', status, res.getUrl());
 		if (StringUtils.isNotBlank(statusText)) {
-			printf('-> Status text: %s\r\n', statusText);
+			System.err.printf('-> Status text: %s\r\n', statusText);
 		}
 		if (StringUtils.isNotBlank(rawBody)) {
-			printf('-> Body: %s\r\n', rawBody);
+			System.err.printf('-> Body: %s\r\n', rawBody);
 		}
 	}
 })
 
 network.enable();
+page.enable();
 
 
 WebUI.navigateToUrl('https://www.atlassian.com/software/jira');
